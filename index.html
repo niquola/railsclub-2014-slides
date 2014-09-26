@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+
+<title>rails club 2014</title>
+<link rel="shortcut icon" href="favicon.png">
+
+<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+<meta name="author" content="Hakim El Hattab">
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<link rel="stylesheet" href="css/reveal.min.css">
+<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+<!-- For syntax highlighting -->
+<link rel="stylesheet" href="lib/css/zenburn.css">
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+if( window.location.search.match( /print-pdf/gi ) ) {
+  var link = document.createElement( 'link' );
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = 'css/print/pdf.css';
+  document.getElementsByTagName( 'head' )[0].appendChild( link );
+}
+</script>
+
+<!--[if lt IE 9]>
+                              <script src="lib/js/html5shiv.js"></script>
+                              <![endif]-->
+</head>
+
+<style>
+body {
+  background: white;
+}
+.reveal {
+  color: #666;
+}
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  color: #444;
+}
+.reveal .fa { font-family:FontAwesome; font-style: normal; }
+</style>
+
+<body>
+
+<div class="reveal">
+
+  <!-- Any section element inside of this container is displayed as a slide -->
+  <div class="slides">
+    <section>
+      <h2>Architecture</h2>
+      <hr/>
+      <h3>in 10 min</h3>
+      <p>
+      <small>by <a href="http://github.com/niquola">niquola</a></small>
+      </p>
+    </section>
+
+    <section>
+      <img src="healthsamurai.png" style="border:none; background:transparent;box-shadow: none;"/>
+      <a href="http://health-samurai.ru"><h3>health samurai</h3></a>
+      <hr/>
+      <p>
+      <a href="http://github.com/niquola">
+        <i class="fa fa-github"></i>
+      <a href="http://twitter.com/niquola">
+        <i class="fa fa-twitter"></i>
+      </a>
+      <a href="https://plus.google.com/u/0/+%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9%D0%A0%D1%8B%D0%B6%D0%B8%D0%BA%D0%BE%D0%B2">
+        <i class="fa fa-google-plus"></i>
+      </a>
+      <a href="https://www.facebook.com/nicola.ryzhikov">
+        <i class="fa fa-facebook"></i>
+      </a>
+      </p>
+      <img src="niquola.jpg" style="border:none; box-shado: none; background: transparent;"/>
+    </section>
+
+
+    <section>
+      <h3>Saint-Petersburg</h3>
+      <img src="spb.jpg" style="border:none; box-shado: none; background: transparent;"/>
+    </section>
+
+    <section>
+      <h3>What is architecture?</h3>
+      <hr/>
+      <ul>
+        <li>Elements (components, connectors, data)</li>
+        <li>Restrictions</li>
+      </ul>
+      <hr/>
+      <h4>Functional properties & Quality attributes</h4>
+    </section>
+
+    <section>
+      <h3>why architecture</h3>
+      <ul>
+        <li>human limitations</li>
+        <li>complexity</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>many architectures</h3>
+      <hr/>
+      <ul>
+        <li>Layer of abstraction</li>
+        <li>Phases (start, configuration, run-time, stop)</li>
+        <li>Evolution</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>levels</h2>
+      <img src="levels-of-organization.png"/>
+      <h3>homo- & heterogeneity</h3>
+    </section>
+
+    <section>
+      <h3>architectural styles</h3>
+      <hr/>
+      <ul>
+        <li>some aspects</li>
+        <li>composition</li>
+        <li>tradeofs</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>zero-architecture</h3>
+      <hr/>
+      <ul>
+        <li>component: any</li>
+        <li>restriction: none</li>
+      </ul>
+    </section>
+
+    <section>
+      <section>
+        <h3>pipeline (sequential)</h3>
+        <hr/>
+        <ul>
+          <li>component: node</li>
+          <li>restriction: input->output</li>
+        </ul>
+        <hr/>
+        <h4>composable & reusable</h4>
+      </section>
+      <section>
+        <h3>Ruby: rack stack</h3>
+      </section>
+    </section>
+
+    <section>
+      <section>
+        <h3>layered (hierarchy)</h3>
+        <hr/>
+        <ul>
+          <li>component: layer</li>
+          <li>restriction: down->up</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Rails MVC</h3>
+        <hr/>
+        <ul>
+          <li>user</li>
+          <li>view</li>
+          <li>controller</li>
+          <li>model</li>
+          <li>db</li>
+        </ul>
+      </section>
+    </section>
+
+    <section>
+      <h3>REST</h3>
+      <hr/>
+      <ul>
+        <li>component: client/server resource/operation/representation</li>
+        <li>restriction: generic, stateless, hypertext-driven</li>
+      </ul>
+    </section>
+  </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+controls: true,
+progress: true,
+history: true,
+center: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+// Parallax scrolling
+// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+// parallaxBackgroundSize: '2100px 900px',
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+]
+});
+
+</script>
+
+</body>
+</html>
