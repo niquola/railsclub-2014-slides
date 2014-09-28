@@ -42,6 +42,11 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 body {
   background: white;
 }
+.reveal section img {
+  border: none;
+  box-shadow: none;
+  background: transparent;
+}
 .reveal {
   color: #666;
 }
@@ -180,16 +185,99 @@ body {
 
 
       <section>
+        <section>
+          <h3>Rails Architecture</h3>
+          <hr/>
+          <img src="mvc.png"/>
+        </section>
+        <section>
+          <h3>Limitations</h3>
+          <hr/>
+          <ul>
+            <li>Weak dependency management</li>
+            <li>Model is heart</li>
+            <li>Right Model is hard</li>
+            <li>Logical Application Boundary</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Use Case Layer</h3>
+          <img src="uc.jpg"/>
+        </section>
+
+        <section>
+          <h3>Use Case Layer</h3>
+          <hr>
+          <ul>
+            <li>+ Decouple from web</li>
+            <li>+ Incapsulate models</li>
+            <li>+ Buisness artifact & specification</li>
+            <li>- ModelDouble</li>
+          </ul>
+        </section>
+
+        <section>
+           <p>System as object</p>
+           <pre>
+             <code>
+              IdentificationSystem.new(configuration).tap do |s|
+                confirmation_key = nil
+
+                s.listen :sign_up do |ev|
+                  confirmation_key = ev.confirmation_key
+                end
+
+                s.sign_up!(email, password)
+                s.confirm!(confirmation_key)
+
+                session_key = s.sign_in!(email, password)
+                s.session_active?(session_key)
+
+                s.sign_out!(session_key)
+              end
+             </code>
+           </pre>
+        </section>
       </section>
 
+
       <section>
-        <h3>REST</h3>
-        <hr/>
-        <ul>
-          <li>component: client/server resource/operation/representation</li>
-          <li>restriction: generic, stateless, hypertext-driven</li>
-        </ul>
+        <section>
+          <h3>Bounded Contexts</h3>
+          <hr/>
+          <img src="ddd.jpg"/>
+        </section>
+        <section>
+          <h3>Micro-Services</h3>
+          <hr/>
+          <img src="sketch.png"/>
+        </section>
+        <section>
+          <h3>Conway's Law</h3>
+          <hr/>
+          <img src="conways-law.png"/>
+        </section>
       </section>
+
+        <section>
+          <h3>Shu-Ha-Ri</h3>
+          <hr/>
+          <img src="shu-ha-ri.png"/>
+        </section>
+
+        <section>
+          <h3>Evolutionary Architecture</h3>
+          <hr/>
+          <img src="file.png"/>
+          <h4>Start from one file</h4>
+        </section>
+
+        <section>
+          <h1>Tnx</h1>
+          <hr/>
+          <p>my train in 23:30</p>
+        </section>
     </div>
   </div>
 
